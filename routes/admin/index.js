@@ -44,10 +44,6 @@ module.exports = app => {
   })
 
   router.get('/', async(req, res) => {
-    const queryOptions = {}
-    if(req.Model.modelName === 'Classification'){
-      queryOptions.populate = 'belong'
-    }
     // const model = await req.Model.find().setOptions(queryOptions)
     const model = await req.Model.find().populate('belong')
     res.send(model)
