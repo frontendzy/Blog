@@ -62,7 +62,7 @@ module.exports = app => {
     const file = req.file
     // file.url = `http://localhost:2700/uploads/${file.filename}`
     file.url = `http://blog.zyfullstack.top/uploads/${file.filename}`
-    
+
     res.send(file)
   })
 

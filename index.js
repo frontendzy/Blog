@@ -11,8 +11,8 @@ require('./routes/admin')(app)
 require('./routes/webs')(app)
 require('./plugins/db')(app)
 
-app.use('/', express.static( __dirname + '/public/webs' ))
-app.use('/admin', express.static( __dirname + '/public/admin' ))
+// app.use('/', express.static( __dirname + '/public/webs' ))
+// app.use('/admin', express.static( __dirname + '/public/admin' ))
 app.use('/uploads', express.static( __dirname + '/uploads' ))
 
 app.listen(2700, () => {
